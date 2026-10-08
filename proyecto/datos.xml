@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Este archivo contiene información detallada sobre mis platos de comida favoritos -->
+<menu propietario="[tu-usuario-de-github]">
+  
+  <plato id="P01">
+    <nombre>Pizza Margarita</nombre>
+    <origen>Italia</origen>
+    <precio moneda="EUR">12.50</precio>
+    <vegetariano/>
+  </plato>
+
+  <plato id="P02">
+    <nombre>Sushi de Salmón</nombre>
+    <origen>Japón</origen>
+    <precio moneda="EUR">18.75</precio>
+    <pescado/>
+  </plato>
+
+  <plato id="P03">
+    <nombre>Tacos al Pastor</nombre>
+    <origen>México</origen>
+    <precio moneda="EUR">9.90</precio>
+    <picante/>
+  </plato>
+
+</menu>
