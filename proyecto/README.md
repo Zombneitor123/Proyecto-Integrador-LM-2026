@@ -13,6 +13,9 @@ He creado la estructura de carpetas de mi proyecto, guardando una página web in
 
 ## UD3 · Estructura HTML
 
+### Palabra del día
+contexto
+
 ### Qué le falta a mi index.html
 1. Completar los metadatos del `<head>` (`description`, `keywords` y `author`) y el formato del `<title>` (`Inicio | Comida Internacional`).
 2. Organizar el contenido del `<body>` en bloques `<div>` comentados y añadir subtítulos `<h3>` para la jerarquía de títulos.
