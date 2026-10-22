@@ -13,7 +13,7 @@ He creado la estructura de carpetas de mi proyecto, guardando una página web in
 
 ## UD3 · Estructura HTML
 
-### Palabra del día
+### Palabra del día (22/10/2026)
 contexto
 
 ### Qué le falta a mi index.html
