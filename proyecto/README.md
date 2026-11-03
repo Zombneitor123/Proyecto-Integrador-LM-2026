@@ -41,3 +41,8 @@ contexto
 
 ### Qué he hecho en esta unidad
 En esta unidad he transformado mi página inicial en un sitio web completo de cuatro páginas sobre comida internacional siguiendo un mapa del sitio definido en el `README.md`. He completado la cabecera `<head>` con todos sus metadatos, estructurado el cuerpo de cada documento mediante una jerarquía de títulos sin saltos (`h1`, `h2` y `h3`) y agrupado las secciones en bloques `<div>` comentados con sangría coherente. Además, he incorporado citas con `<blockquote>`, fichas alineadas en `<pre>`, entidades HTML nominales y numéricas, volcado todos los elementos de `datos.xml` en `platos.html` y validado todo el sitio en el validador del W3C hasta lograr 0 errores.
+
+## UD5 · Tablas y formularios
+
+### Propósito de la tabla y del formulario
+En la página `platos.html` voy a incluir una tabla comparativa con los platos de nuestra carta internacional (país y tradición culinaria, categoría alimentaria, tiempo de elaboración y precio por ración, más un menú degustación y el total). El formulario de la página `contacto.html` servirá para que los visitantes propongan nuevas recetas tradicionales, se inscriban en los talleres de cocina en directo de los sábados o consulten dudas sobre ingredientes y alérgenos.
