@@ -44,5 +44,8 @@ En esta unidad he transformado mi página inicial en un sitio web completo de cu
 
 ## UD5 · Tablas y formularios
 
+### Palabra del día (05/11/2026)
+día
+
 ### Propósito de la tabla y del formulario
 En la página `platos.html` voy a incluir una tabla comparativa con los platos de nuestra carta internacional (país y tradición culinaria, categoría alimentaria, tiempo de elaboración y precio por ración, más un menú degustación y el total). El formulario de la página `contacto.html` servirá para que los visitantes propongan nuevas recetas tradicionales, se inscriban en los talleres de cocina en directo de los sábados o consulten dudas sobre ingredientes y alérgenos.
