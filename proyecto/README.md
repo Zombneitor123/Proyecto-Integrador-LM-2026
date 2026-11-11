@@ -25,10 +25,10 @@ contexto
 
 | Fichero | title | Qué contiene |
 | :--- | :--- | :--- |
-| `index.html` | Inicio \| Comida Internacional | Portada: presentación del proyecto, introducción a las tradiciones e ingredientes, platos favoritos, ficha técnica en `<pre>` y cita gastronómica en `<blockquote>`. |
-| `platos.html` | Platos \| Comida Internacional | Catálogo completo con todos los platos de `datos.xml` (`Pizza Margarita`, `Sushi de Salmón` y `Tacos al Pastor`), incluyendo su ID, origen, precio en euros, categoría e ingredientes. |
+| `index.html` | Inicio \| Comida Internacional | Portada: presentación del proyecto, introducción a las tradiciones e ingredientes, platos favoritos, enlaces al catálogo y a `contacto.html`, ficha técnica en `<pre>` y cita en `<blockquote>`. |
+| `platos.html` | Platos \| Comida Internacional | Catálogo completo con todos los platos de `datos.xml` (`Pizza Margarita`, `Sushi de Salmón` y `Tacos al Pastor`) y tabla comparativa de datos (`<table>`) con tiempos, categorías y precios. |
 | `historia.html` | Historia \| Comida Internacional | Orígenes e historia cultural de las tres grandes cocinas del proyecto (Italia, Japón y México), técnicas tradicionales y cita histórica sobre patrimonio culinario. |
-| `contacto.html` | Contacto \| Comida Internacional | Datos de contacto del proyecto, horarios de atención y colaboraciones en formato `<pre>`, reseñas de lectores en `<blockquote>` y preguntas frecuentes. |
+| `contacto.html` | Contacto \| Comida Internacional | Formulario de contacto (`<form method="post">`) para enviar recetas o apuntarse a los talleres, horarios de atención en `<pre>` y opiniones de lectores en `<blockquote>`. |
 
 ### Validación W3C
 
@@ -49,3 +49,17 @@ día
 
 ### Propósito de la tabla y del formulario
 En la página `platos.html` voy a incluir una tabla comparativa con los platos de nuestra carta internacional (país y tradición culinaria, categoría alimentaria, tiempo de elaboración y precio por ración, más un menú degustación y el total). El formulario de la página `contacto.html` servirá para que los visitantes propongan nuevas recetas tradicionales, se inscriban en los talleres de cocina en directo de los sábados o consulten dudas sobre ingredientes y alérgenos.
+
+### Por qué uso `method="post"` y prueba con `method="get"`
+Uso `method="post"` en vez de `get` porque el formulario pide datos personales del usuario (nombre, correo y teléfono) además de un texto largo en `<textarea>`, y con `post` viajan ocultos en el cuerpo de la petición HTTP sin quedarse visibles en la URL del navegador.
+
+Al cambiar el formulario temporalmente a `method="get"` y darle a «Enviar consulta», la URL que salió en la barra del navegador fue:
+`http://127.0.0.1:5500/proyecto/contacto.html?nombre=Manuel+Alonso+Bono&correo=manuel%40ejemplo.es&telefono=612345678&cocina_favorita=italiana&motivo=proponer_receta&intereses=vegetariano&mensaje=Hola+quiero+mandar+la+receta+de+la+lasana+casera.&enviar=Enviar+consulta`
+
+### Validación W3C (UD5)
+
+| Página | Errores detectados por el validador W3C | Cómo se corrigieron |
+| :--- | :--- | :--- |
+| `platos.html` | 0 errores en el validador. | No hizo falta corregir nada porque las celdas combinadas con `rowspan` y `colspan` cuadraban con las 5 columnas del `<colgroup>`. |
+| `contacto.html` | `Error: The first option element in a select element with a required attribute must have an empty value attribute.` | Le quité el atributo `required` al `<select>` porque ya tiene la primera opción marcada por defecto con `selected` (`fix(contacto)`). |
+| `index.html` | 0 errores en el validador. | El enlace nuevo a `contacto.html` validó sin errores a la primera. |
