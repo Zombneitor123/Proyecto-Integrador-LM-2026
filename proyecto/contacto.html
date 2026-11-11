@@ -45,6 +45,51 @@
           <input type="tel" id="telefono" name="telefono">
         </p>
       </fieldset>
+
+      <!-- Segundo fieldset con la consulta y opciones del tema -->
+      <fieldset>
+        <legend>Tu consulta</legend>
+
+        <p>
+          <label for="cocina-favorita">Tipo de cocina:</label><br>
+          <select id="cocina-favorita" name="cocina_favorita">
+            <option value="italiana">Cocina Italiana (Pizza Margarita y pastas)</option>
+            <option value="japonesa">Cocina Japonesa (Sushi de Salmón y ramen)</option>
+            <option value="mexicana">Cocina Mexicana (Tacos al Pastor y chiles)</option>
+            <option value="mediterranea">Cocina Mediterránea Tradicional</option>
+            <option value="otra">Otra cocina del mundo</option>
+          </select>
+        </p>
+
+        <p>Motivo de tu mensaje:</p>
+        <p>
+          <input type="radio" id="motivo-receta" name="motivo" value="proponer_receta">
+          <label for="motivo-receta">Proponer una receta nueva</label><br>
+
+          <input type="radio" id="motivo-taller" name="motivo" value="inscripcion_taller">
+          <label for="motivo-taller">Apuntarme al taller de cocina de los sábados</label><br>
+
+          <input type="radio" id="motivo-duda" name="motivo" value="duda_ingredientes">
+          <label for="motivo-duda">Preguntar una duda sobre ingredientes o alérgenos</label>
+        </p>
+
+        <p>Platos que te interesan:</p>
+        <p>
+          <input type="checkbox" id="interes-vegetariano" name="intereses" value="vegetariano">
+          <label for="interes-vegetariano">Platos vegetarianos (como la Pizza Margarita)</label><br>
+
+          <input type="checkbox" id="interes-pescado" name="intereses" value="pescado">
+          <label for="interes-pescado">Platos con pescado (como el Sushi de Salmón)</label><br>
+
+          <input type="checkbox" id="interes-picante" name="intereses" value="picante">
+          <label for="interes-picante">Platos picantes (como los Tacos al Pastor)</label>
+        </p>
+
+        <p>
+          <label for="mensaje">Escribe aquí tu mensaje o receta:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="5" cols="45"></textarea>
+        </p>
+      </fieldset>
     </form>
   </div>
 
