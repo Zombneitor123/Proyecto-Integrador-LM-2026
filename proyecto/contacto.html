@@ -32,17 +32,17 @@
 
         <p>
           <label for="nombre">Nombre completo:</label><br>
-          <input type="text" id="nombre" name="nombre">
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Manuel Alonso Bono" minlength="3" maxlength="60" required autofocus>
         </p>
 
         <p>
           <label for="correo">Correo electrónico:</label><br>
-          <input type="email" id="correo" name="correo">
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.es" required>
         </p>
 
         <p>
           <label for="telefono">Teléfono:</label><br>
-          <input type="tel" id="telefono" name="telefono">
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej. 612345678" minlength="9" maxlength="15">
         </p>
       </fieldset>
 
@@ -52,8 +52,8 @@
 
         <p>
           <label for="cocina-favorita">Tipo de cocina:</label><br>
-          <select id="cocina-favorita" name="cocina_favorita">
-            <option value="italiana">Cocina Italiana (Pizza Margarita y pastas)</option>
+          <select id="cocina-favorita" name="cocina_favorita" required>
+            <option value="italiana" selected>Cocina Italiana (Pizza Margarita y pastas)</option>
             <option value="japonesa">Cocina Japonesa (Sushi de Salmón y ramen)</option>
             <option value="mexicana">Cocina Mexicana (Tacos al Pastor y chiles)</option>
             <option value="mediterranea">Cocina Mediterránea Tradicional</option>
@@ -63,7 +63,7 @@
 
         <p>Motivo de tu mensaje:</p>
         <p>
-          <input type="radio" id="motivo-receta" name="motivo" value="proponer_receta">
+          <input type="radio" id="motivo-receta" name="motivo" value="proponer_receta" required>
           <label for="motivo-receta">Proponer una receta nueva</label><br>
 
           <input type="radio" id="motivo-taller" name="motivo" value="inscripcion_taller">
@@ -75,7 +75,7 @@
 
         <p>Platos que te interesan:</p>
         <p>
-          <input type="checkbox" id="interes-vegetariano" name="intereses" value="vegetariano">
+          <input type="checkbox" id="interes-vegetariano" name="intereses" value="vegetariano" checked>
           <label for="interes-vegetariano">Platos vegetarianos (como la Pizza Margarita)</label><br>
 
           <input type="checkbox" id="interes-pescado" name="intereses" value="pescado">
@@ -87,7 +87,12 @@
 
         <p>
           <label for="mensaje">Escribe aquí tu mensaje o receta:</label><br>
-          <textarea id="mensaje" name="mensaje" rows="5" cols="45"></textarea>
+          <textarea id="mensaje" name="mensaje" rows="5" cols="45" placeholder="Escribe aquí los ingredientes y pasos de tu receta o tu consulta..." minlength="10" maxlength="500" required></textarea>
+        </p>
+
+        <p>
+          <input type="submit" id="btn-enviar" name="enviar" value="Enviar consulta">
+          <input type="reset" id="btn-limpiar" name="limpiar" value="Borrar formulario">
         </p>
       </fieldset>
     </form>
