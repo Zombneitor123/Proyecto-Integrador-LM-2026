@@ -63,3 +63,6 @@ Al cambiar el formulario temporalmente a `method="get"` y darle a «Enviar consu
 | `platos.html` | 0 errores en el validador. | No hizo falta corregir nada porque las celdas combinadas con `rowspan` y `colspan` cuadraban con las 5 columnas del `<colgroup>`. |
 | `contacto.html` | `Error: The first option element in a select element with a required attribute must have an empty value attribute.` | Le quité el atributo `required` al `<select>` porque ya tiene la primera opción marcada por defecto con `selected` (`fix(contacto)`). |
 | `index.html` | 0 errores en el validador. | El enlace nuevo a `contacto.html` validó sin errores a la primera. |
+
+### Qué he hecho en esta unidad
+En esta unidad he añadido una tabla de datos completa en `platos.html` usando `<caption>`, `<colgroup>`, `<thead>`, `<tbody>` y `<tfoot>`, combinando celdas con `rowspan` y `colspan` y poniendo `scope` en las cabeceras. También he creado el formulario de `contacto.html` con `method="post"`, dividido en dos `<fieldset>` con su `<legend>`, incluyendo los 8 tipos de controles pedidos (`text`, `email`, `tel`, `select`, `radio`, `checkbox`, `textarea`, `submit` y `reset`) con sus `<label for="...">` y atributos de validación. Finalmente he enlazado `contacto.html` desde el `index.html`, he hecho la prueba con `get` y he validado todas las páginas en el W3C hasta dejarlas con 0 errores.
