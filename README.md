@@ -109,7 +109,7 @@ He enriquecido el formulario de `contacto.html` integrando controles avanzados d
 - **Vídeo nativo HTML5:** Etiqueta `<video controls poster="media/poster-receta.jpg" width="480">` ubicada en `index.html` con dos fuentes alternativas:
   - `<source src="media/elaboracion-receta.mp4" type="video/mp4">`
   - `<source src="media/elaboracion-receta.webm" type="video/webm">`
-  Guardados en la carpeta `media/` con un tamaño inferior a 1 MB cada uno.
+  Vídeo real de elaboración y horneado de pizza artesanal, guardado en la carpeta `media/` con un tamaño inferior a 8 MB (cumpliendo el límite de 10 MB).
 - **Audio nativo HTML5:** Etiqueta `<audio controls>` con dos fuentes:
   - `<source src="media/taller-podcast.mp3" type="audio/mpeg">`
   - `<source src="media/taller-podcast.ogg" type="audio/ogg">`
