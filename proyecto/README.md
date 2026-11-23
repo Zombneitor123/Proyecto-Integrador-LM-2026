@@ -110,9 +110,7 @@ He enriquecido el formulario de `contacto.html` integrando controles avanzados d
   - `<source src="media/elaboracion-receta.mp4" type="video/mp4">`
   - `<source src="media/elaboracion-receta.webm" type="video/webm">`
   Vídeo real de elaboración y horneado de pizza artesanal, guardado en la carpeta `media/` con un tamaño inferior a 8 MB (cumpliendo el límite de 10 MB).
-- **Audio nativo HTML5:** Etiqueta `<audio controls>` con dos fuentes:
-  - `<source src="media/taller-podcast.mp3" type="audio/mpeg">`
-  - `<source src="media/taller-podcast.ogg" type="audio/ogg">`
+- **Audio nativo HTML5:** Etiqueta `<audio controls>` con dos fuentes alternativas (`media/taller-podcast.mp3` y `media/taller-podcast.ogg`), que sirve como sintonía musical y cabecera sonora de los talleres culinarios.
 - **Vídeo externo incrustado:** Se ha añadido un reproductor de YouTube mediante `<iframe>` con atributos de accesibilidad y modo responsive.
 - **Figuras semánticas:** Al menos dos imágenes se han encapsulado mediante `<figure>` y su correspondiente pie de foto descriptivo con `<figcaption>`:
   - `img/comida.jpg`: Panorama culinario general.
