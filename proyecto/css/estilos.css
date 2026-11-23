@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Hoja de Estilos Externa: estilos.css
+   Proyecto Integrador: Comida Internacional (LM 1.º DAM)
+   Autor: zombneitor123
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Variables globales y paleta temática
+   -------------------------------------------------------------------------- */
+:root {
+  --color-primario: #b03a2e;       /* Rojo tomate tradicional */
+  --color-primario-hover: #922b21;
+  --color-secundario: #196f3d;     /* Verde albahaca */
+  --color-fondo: #fcfbf7;          /* Tono crema cálido */
+  --color-tarjeta: #ffffff;        /* Blanco para artículos */
+  --color-texto: #2c3e50;          /* Gris oscuro para lectura */
+  --color-texto-suave: #5d6d7e;    /* Gris medio */
+  --color-borde: #e5e0d8;          /* Gris cálido suave */
+  --color-acento: #d35400;         /* Naranja terracota */
+  --fuente-principal: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --fuente-mono: "Consolas", "Courier New", monospace;
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --radio-borde: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reseteo básico y tipografía general
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente-principal);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-primario);
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--color-borde);
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--color-secundario);
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-acento);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-borde);
+  margin: 2.5rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Cabecera (<header>) y barra de navegación (<nav>)
+   -------------------------------------------------------------------------- */
+header {
+  background: linear-gradient(135deg, #78281f 0%, #b03a2e 100%);
+  color: #ffffff;
+  padding: 2.5rem 1.5rem 1.8rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  color: #ffffff;
+  margin: 0 0 0.4rem;
+  font-size: 2.3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  color: #f9ebea;
+  margin: 0 0 1.5rem;
+  font-size: 1.1rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #ffffff;
+  color: var(--color-primario);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
