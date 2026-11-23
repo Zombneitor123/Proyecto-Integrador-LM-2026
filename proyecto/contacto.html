@@ -6,135 +6,147 @@
   <title>Contacto | Comida Internacional</title>
   <meta name="description" content="Formulario de contacto, inscripción a talleres y propuestas de nuevas recetas para el proyecto de Comida Internacional.">
   <meta name="keywords" content="contacto gastronomia, formulario recetas, talleres cocina, comida internacional">
-  <meta name="author" content="Manuel Alonso Bono Torres">
+  <meta name="author" content="zombneitor123">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <!-- NAV: aquí irá el menú (UD4) -->
-
-  <!-- Cabecera de la página de contacto -->
-  <div>
+  <!-- Cabecera del sitio web con identidad y navegación -->
+  <header>
     <h1>Contacto y Sugerencias Gastronómicas</h1>
-    <p>Si deseas proponer nuevas recetas internacionales, apuntarte a nuestros talleres o consultar dudas sobre ingredientes, rellena el formulario de abajo&#33;</p>
-  </div>
+    <p>Tradición &amp; Cultura Gastronómica de las grandes cocinas del mundo</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="platos.html">Platos y Menú</a></li>
+        <li><a href="historia.html">Historia Culinaria</a></li>
+        <li><a href="contacto.html">Contacto y Talleres</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <hr>
+  <!-- Contenido principal único de la página de contacto -->
+  <main>
+    <!-- Sección con el formulario de contacto -->
+    <section id="seccion-formulario">
+      <h2>Formulario de Contacto y Participación</h2>
+      <p>Completa tus datos para enviarnos una receta tradicional, consultar dudas sobre ingredientes o apuntarte a nuestros talleres culinarios de los sábados.</p>
 
-  <!-- Sección con el formulario de contacto -->
-  <div>
-    <h2>Formulario de Contacto</h2>
-    <p>Completa tus datos para enviarnos una receta o apuntarte a las actividades de la web.</p>
+      <form action="#" method="post">
+        <!-- Primer fieldset con los datos personales -->
+        <fieldset>
+          <legend>Tus datos</legend>
 
-    <!-- Formulario enviado con post -->
-    <form action="#" method="post">
-      <!-- Primer fieldset con los datos personales -->
-      <fieldset>
-        <legend>Tus datos</legend>
+          <p>
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Manuel Alonso Bono" minlength="3" maxlength="60" required autofocus>
+          </p>
 
-        <p>
-          <label for="nombre">Nombre completo:</label><br>
-          <input type="text" id="nombre" name="nombre" placeholder="Ej. Manuel Alonso Bono" minlength="3" maxlength="60" required autofocus>
-        </p>
+          <p>
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.es" required>
+          </p>
 
-        <p>
-          <label for="correo">Correo electrónico:</label><br>
-          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.es" required>
-        </p>
+          <p>
+            <label for="telefono">Teléfono:</label><br>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 612345678" minlength="9" maxlength="15">
+          </p>
+        </fieldset>
 
-        <p>
-          <label for="telefono">Teléfono:</label><br>
-          <input type="tel" id="telefono" name="telefono" placeholder="Ej. 612345678" minlength="9" maxlength="15">
-        </p>
-      </fieldset>
+        <!-- Segundo fieldset con la consulta y opciones del tema -->
+        <fieldset>
+          <legend>Tu consulta</legend>
 
-      <!-- Segundo fieldset con la consulta y opciones del tema -->
-      <fieldset>
-        <legend>Tu consulta</legend>
+          <p>
+            <label for="cocina-favorita">Tipo de cocina:</label><br>
+            <select id="cocina-favorita" name="cocina_favorita">
+              <option value="italiana" selected>Cocina Italiana (Pizza Margarita y pastas)</option>
+              <option value="japonesa">Cocina Japonesa (Sushi de Salmón y ramen)</option>
+              <option value="mexicana">Cocina Mexicana (Tacos al Pastor y chiles)</option>
+              <option value="mediterranea">Cocina Mediterránea Tradicional</option>
+              <option value="otra">Otra cocina del mundo</option>
+            </select>
+          </p>
 
-        <p>
-          <label for="cocina-favorita">Tipo de cocina:</label><br>
-          <select id="cocina-favorita" name="cocina_favorita">
-            <option value="italiana" selected>Cocina Italiana (Pizza Margarita y pastas)</option>
-            <option value="japonesa">Cocina Japonesa (Sushi de Salmón y ramen)</option>
-            <option value="mexicana">Cocina Mexicana (Tacos al Pastor y chiles)</option>
-            <option value="mediterranea">Cocina Mediterránea Tradicional</option>
-            <option value="otra">Otra cocina del mundo</option>
-          </select>
-        </p>
+          <p>Motivo de tu mensaje:</p>
+          <p>
+            <input type="radio" id="motivo-receta" name="motivo" value="proponer_receta" required>
+            <label for="motivo-receta">Proponer una receta nueva</label><br>
 
-        <p>Motivo de tu mensaje:</p>
-        <p>
-          <input type="radio" id="motivo-receta" name="motivo" value="proponer_receta" required>
-          <label for="motivo-receta">Proponer una receta nueva</label><br>
+            <input type="radio" id="motivo-taller" name="motivo" value="inscripcion_taller">
+            <label for="motivo-taller">Apuntarme al taller de cocina de los sábados</label><br>
 
-          <input type="radio" id="motivo-taller" name="motivo" value="inscripcion_taller">
-          <label for="motivo-taller">Apuntarme al taller de cocina de los sábados</label><br>
+            <input type="radio" id="motivo-duda" name="motivo" value="duda_ingredientes">
+            <label for="motivo-duda">Preguntar una duda sobre ingredientes o alérgenos</label>
+          </p>
 
-          <input type="radio" id="motivo-duda" name="motivo" value="duda_ingredientes">
-          <label for="motivo-duda">Preguntar una duda sobre ingredientes o alérgenos</label>
-        </p>
+          <p>Platos que te interesan:</p>
+          <p>
+            <input type="checkbox" id="interes-vegetariano" name="intereses" value="vegetariano" checked>
+            <label for="interes-vegetariano">Platos vegetarianos (como la Pizza Margarita)</label><br>
 
-        <p>Platos que te interesan:</p>
-        <p>
-          <input type="checkbox" id="interes-vegetariano" name="intereses" value="vegetariano" checked>
-          <label for="interes-vegetariano">Platos vegetarianos (como la Pizza Margarita)</label><br>
+            <input type="checkbox" id="interes-pescado" name="intereses" value="pescado">
+            <label for="interes-pescado">Platos con pescado (como el Sushi de Salmón)</label><br>
 
-          <input type="checkbox" id="interes-pescado" name="intereses" value="pescado">
-          <label for="interes-pescado">Platos con pescado (como el Sushi de Salmón)</label><br>
+            <input type="checkbox" id="interes-picante" name="intereses" value="picante">
+            <label for="interes-picante">Platos picantes (como los Tacos al Pastor)</label>
+          </p>
 
-          <input type="checkbox" id="interes-picante" name="intereses" value="picante">
-          <label for="interes-picante">Platos picantes (como los Tacos al Pastor)</label>
-        </p>
+          <p>
+            <label for="mensaje">Escribe aquí tu mensaje o receta:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="45" placeholder="Escribe aquí los ingredientes y pasos de tu receta o tu consulta..." minlength="10" maxlength="500" required></textarea>
+          </p>
 
-        <p>
-          <label for="mensaje">Escribe aquí tu mensaje o receta:</label><br>
-          <textarea id="mensaje" name="mensaje" rows="5" cols="45" placeholder="Escribe aquí los ingredientes y pasos de tu receta o tu consulta..." minlength="10" maxlength="500" required></textarea>
-        </p>
+          <p>
+            <input type="submit" id="btn-enviar" name="enviar" value="Enviar consulta">
+            <input type="reset" id="btn-limpiar" name="limpiar" value="Borrar formulario">
+          </p>
+        </fieldset>
+      </form>
+    </section>
 
-        <p>
-          <input type="submit" id="btn-enviar" name="enviar" value="Enviar consulta">
-          <input type="reset" id="btn-limpiar" name="limpiar" value="Borrar formulario">
-        </p>
-      </fieldset>
-    </form>
-  </div>
+    <hr>
 
-  <hr>
+    <!-- Sección de canales de atención y opiniones -->
+    <section id="informacion-atencion">
+      <h2>Información de Atención y Comunidad</h2>
+      <p>Respondemos consultas sobre elaboración de platos tradicionales, equivalencias de ingredientes &amp; fuentes documentales de lunes a viernes.</p>
 
-  <!-- Sección de canales de atención y horarios -->
-  <div>
-    <h2>Información de Atención al Lector</h2>
-    <p>Respondemos consultas sobre elaboración de platos tradicionales, equivalencias de ingredientes &amp; fuentes documentales de lunes a viernes.</p>
-
-    <!-- Subsección de ficha de horarios y contacto en texto preformateado -->
-    <div>
-      <h3>Ficha de Contacto y Horarios</h3>
-      <p>Datos de contacto directo y franjas de atención del proyecto:</p>
+      <article id="horarios-atencion">
+        <h3>Ficha de Contacto y Horarios</h3>
+        <p>Datos de contacto directo y franjas de atención del proyecto:</p>
 <pre>
 CANAL                DETALLE DE CONTACTO                   HORARIO DE ATENCIÓN
 -------------------------------------------------------------------------------
 Correo electrónico   contacto@comidainternacional.es       Lunes a Viernes (09:00 - 18:00)
-Repositorio GitHub   github.com/Zombneitor123              Disponible 24 horas
+Repositorio GitHub   github.com/zombneitor123              Disponible 24 horas
 Talleres online      Sesiones de cocina en directo         Sábados (11:00 - 13:30)
 </pre>
-    </div>
+      </article>
 
-    <!-- Subsección de opiniones de lectores -->
-    <div>
-      <h3>Opiniones de Nuestra Comunidad</h3>
-      <blockquote>
-        <p>Gracias a las fichas detalladas del proyecto me animé a preparar en casa la masa de la Pizza Margarita al estilo napolitano y a buscar los chiles secos auténticos para los Tacos al Pastor.</p>
-        <p>Explicar el contexto cultural de cada plato junto con sus datos estructurados hace que aprender cocina internacional sea mucho más ameno y riguroso.</p>
-      </blockquote>
-      <p>Reseña enviada por <strong>Laura Gómez</strong>, lectora y aficionada a la cocina internacional.</p>
-    </div>
-  </div>
+      <article id="opiniones-comunidad">
+        <h3>Opiniones de Nuestra Comunidad</h3>
+        <blockquote>
+          <p>Gracias a las fichas detalladas del proyecto me animé a preparar en casa la masa de la Pizza Margarita al estilo napolitano y a buscar los chiles secos auténticos para los Tacos al Pastor.</p>
+          <p>Explicar el contexto cultural de cada plato junto con sus datos estructurados hace que aprender cocina internacional sea mucho más ameno y riguroso.</p>
+        </blockquote>
+        <p>Reseña enviada por <strong>Laura Gómez</strong>, lectora y aficionada a la cocina internacional.</p>
+      </article>
+    </section>
 
-  <hr>
+    <!-- Contenido secundario lateral -->
+    <aside id="lateral-contacto">
+      <h2>Recomendaciones para tu Consulta</h2>
+      <article id="consejos-recetas">
+        <h3>Si nos envías una receta:</h3>
+        <p>Indica claramente los gramos o medidas exactas de los ingredientes y el tiempo estimado de cocción para que podamos incorporarla al catálogo oficial con su correspondiente ficha XML.</p>
+      </article>
+    </aside>
+  </main>
 
-  <!-- Pie de página con derechos de autor -->
-  <div>
-    <p>&copy; 2026 Manuel Alonso Bono Torres. Todos los derechos reservados.</p>
+  <!-- Pie de página con firma y metadatos del autor -->
+  <footer>
+    <p id="firma-zombneitor123">&copy; 2026 zombneitor123</p>
     <p>Página de contacto del Proyecto Integrador de Lenguajes de Marcas (1.º DAM).</p>
-  </div>
+  </footer>
 </body>
 </html>
