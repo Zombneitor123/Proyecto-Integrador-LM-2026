@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | Comida Internacional</title>
-  <meta name="description" content="Formulario de contacto, inscripción a talleres y propuestas de nuevas recetas para el proyecto de Comida Internacional.">
+  <meta name="description" content="Formulario de contacto, inscripción a talleres gastronómicos y propuestas de nuevas recetas para el proyecto de Comida Internacional.">
   <meta name="keywords" content="contacto gastronomia, formulario recetas, talleres cocina, comida internacional">
   <meta name="author" content="zombneitor123">
   <link rel="stylesheet" href="css/estilos.css">
@@ -26,79 +26,139 @@
 
   <!-- Contenido principal único de la página de contacto -->
   <main>
-    <!-- Sección con el formulario de contacto -->
+    <!-- Sección con el formulario de contacto enriquecido con HTML5 -->
     <section id="seccion-formulario">
-      <h2>Formulario de Contacto y Participación</h2>
-      <p>Completa tus datos para enviarnos una receta tradicional, consultar dudas sobre ingredientes o apuntarte a nuestros talleres culinarios de los sábados.</p>
+      <h2>Formulario de Contacto y Participación Culinaria</h2>
+      <p>Envíanos una receta tradicional, inscríbete en nuestros talleres presenciales o consúltanos cualquier duda sobre técnicas culinarias e ingredientes autóctonos.</p>
+
+      <!-- Indicadores de estado: aforo y plazas en HTML5 -->
+      <article id="indicadores-aforo">
+        <h3>Estado de Plazas y Aforo para los Talleres en Vivo</h3>
+        <p>
+          <label for="aforo-taller">Aforo actual de la sala de degustación (nivel óptimo):</label><br>
+          <meter id="aforo-taller" min="0" max="100" low="30" high="75" optimum="50" value="80">80%</meter>
+          <span>80% ocupado (alta afluencia)</span>
+        </p>
+        <p>
+          <label for="progreso-plazas">Avance de reserva de plazas para el sábado (16 de 20):</label><br>
+          <progress id="progreso-plazas" max="20" value="16">16 de 20 plazas</progress>
+          <span>16 / 20 plazas confirmadas</span>
+        </p>
+      </article>
 
       <form action="#" method="post">
-        <!-- Primer fieldset con los datos personales -->
+        <!-- Primer fieldset: Datos de contacto del remitente -->
         <fieldset>
-          <legend>Tus datos</legend>
+          <legend>1. Datos del participante</legend>
 
           <p>
-            <label for="nombre">Nombre completo:</label><br>
+            <label for="nombre">Nombre completo (obligatorio):</label><br>
             <input type="text" id="nombre" name="nombre" placeholder="Ej. Manuel Alonso Bono" minlength="3" maxlength="60" required autofocus>
           </p>
 
           <p>
-            <label for="correo">Correo electrónico:</label><br>
+            <label for="correo">Correo electrónico (obligatorio):</label><br>
             <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.es" required>
           </p>
 
           <p>
-            <label for="telefono">Teléfono:</label><br>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 612345678" minlength="9" maxlength="15">
+            <label for="telefono">Teléfono de contacto (obligatorio):</label><br>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 612345678" pattern="[0-9]{9}" title="Introduce un número de teléfono de 9 dígitos (ej. 612345678)" required>
+          </p>
+
+          <p>
+            <label for="codigo-postal">Código postal (5 dígitos):</label><br>
+            <input type="text" id="codigo-postal" name="codigo_postal" placeholder="41001" pattern="[0-9]{5}" title="Introduce un código postal español válido de 5 cifras numéricas (ej. 41001)" required>
+          </p>
+
+          <p>
+            <label for="sitio-web">Enlace a tu blog o receta online (URL opcional):</label><br>
+            <input type="url" id="sitio-web" name="sitio_web" placeholder="https://misrecetas.es/pizza-casera">
           </p>
         </fieldset>
 
-        <!-- Segundo fieldset con la consulta y opciones del tema -->
+        <!-- Segundo fieldset: Preferencias del taller o propuesta de plato -->
         <fieldset>
-          <legend>Tu consulta</legend>
+          <legend>2. Datos del taller o propuesta de receta</legend>
 
           <p>
-            <label for="cocina-favorita">Tipo de cocina:</label><br>
+            <label for="codigo-plato">Código de referencia del plato (patrón P seguido de 2 cifras):</label><br>
+            <input type="text" id="codigo-plato" name="codigo_plato" placeholder="Ej. P01" pattern="P[0-9]{2}" title="El código debe comenzar por una 'P' mayúscula seguida de 2 números (ejemplo: P01, P02, P04)">
+          </p>
+
+          <p>
+            <label for="fecha-taller">Fecha preferida para el taller (entre nov 2026 y jun 2027):</label><br>
+            <input type="date" id="fecha-taller" name="fecha_taller" min="2026-11-01" max="2027-06-30" required>
+          </p>
+
+          <p>
+            <label for="hora-taller">Hora del turno (horario de 10:00 a 20:00 en intervalos de 30 min):</label><br>
+            <input type="time" id="hora-taller" name="hora_taller" min="10:00" max="20:00" step="1800" required>
+          </p>
+
+          <p>
+            <label for="asistentes">Número de comensales / plazas a reservar (de 1 a 10):</label><br>
+            <input type="number" id="asistentes" name="asistentes" min="1" max="10" step="1" value="1" required>
+          </p>
+
+          <p>
+            <label for="nivel-picante">Tolerancia o preferencia de nivel de picante (1 suave - 5 muy picante):</label><br>
+            <input type="range" id="nivel-picante" name="nivel_picante" min="1" max="5" step="1" value="3">
+          </p>
+
+          <p>
+            <label for="color-delantal">Color personalizado para tu delantal de cocina:</label><br>
+            <input type="color" id="color-delantal" name="color_delantal" value="#b03a2e">
+          </p>
+        </fieldset>
+
+        <!-- Tercer fieldset: Preferencias culinarias y mensaje -->
+        <fieldset>
+          <legend>3. Opciones culinarias y consulta</legend>
+
+          <p>
+            <label for="cocina-favorita">Tipo de tradición culinaria:</label><br>
             <select id="cocina-favorita" name="cocina_favorita">
-              <option value="italiana" selected>Cocina Italiana (Pizza Margarita y pastas)</option>
-              <option value="japonesa">Cocina Japonesa (Sushi de Salmón y ramen)</option>
-              <option value="mexicana">Cocina Mexicana (Tacos al Pastor y chiles)</option>
+              <option value="italiana" selected>Cocina Italiana (Pizza Margarita, pastas y salsas)</option>
+              <option value="japonesa">Cocina Japonesa (Sushi de Salmón, ramen y dashi)</option>
+              <option value="mexicana">Cocina Mexicana (Tacos al Pastor, marinados y chiles)</option>
               <option value="mediterranea">Cocina Mediterránea Tradicional</option>
               <option value="otra">Otra cocina del mundo</option>
             </select>
           </p>
 
-          <p>Motivo de tu mensaje:</p>
+          <p>Motivo principal de tu mensaje:</p>
           <p>
             <input type="radio" id="motivo-receta" name="motivo" value="proponer_receta" required>
-            <label for="motivo-receta">Proponer una receta nueva</label><br>
+            <label for="motivo-receta">Proponer una receta tradicional para el catálogo</label><br>
 
             <input type="radio" id="motivo-taller" name="motivo" value="inscripcion_taller">
-            <label for="motivo-taller">Apuntarme al taller de cocina de los sábados</label><br>
+            <label for="motivo-taller">Inscribirme al taller práctico de cocina de los sábados</label><br>
 
             <input type="radio" id="motivo-duda" name="motivo" value="duda_ingredientes">
-            <label for="motivo-duda">Preguntar una duda sobre ingredientes o alérgenos</label>
+            <label for="motivo-duda">Consultar dudas sobre ingredientes, técnicas o alérgenos</label>
           </p>
 
-          <p>Platos que te interesan:</p>
+          <p>Platos que despiertan tu interés:</p>
           <p>
             <input type="checkbox" id="interes-vegetariano" name="intereses" value="vegetariano" checked>
-            <label for="interes-vegetariano">Platos vegetarianos (como la Pizza Margarita)</label><br>
+            <label for="interes-vegetariano">Platos vegetarianos (como la Pizza Margarita napolitana)</label><br>
 
             <input type="checkbox" id="interes-pescado" name="intereses" value="pescado">
-            <label for="interes-pescado">Platos con pescado (como el Sushi de Salmón)</label><br>
+            <label for="interes-pescado">Especialidades con pescado fresco (como el Sushi de Salmón)</label><br>
 
             <input type="checkbox" id="interes-picante" name="intereses" value="picante">
-            <label for="interes-picante">Platos picantes (como los Tacos al Pastor)</label>
+            <label for="interes-picante">Platos condimentados y picantes (como los Tacos al Pastor)</label>
           </p>
 
           <p>
-            <label for="mensaje">Escribe aquí tu mensaje o receta:</label><br>
-            <textarea id="mensaje" name="mensaje" rows="5" cols="45" placeholder="Escribe aquí los ingredientes y pasos de tu receta o tu consulta..." minlength="10" maxlength="500" required></textarea>
+            <label for="mensaje">Escribe aquí tu consulta o los ingredientes y pasos de tu receta:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="45" placeholder="Escribe aquí los ingredientes, proporciones, pasos de cocción o dudas sobre el taller..." minlength="10" maxlength="500" required></textarea>
           </p>
 
           <p>
-            <input type="submit" id="btn-enviar" name="enviar" value="Enviar consulta">
-            <input type="reset" id="btn-limpiar" name="limpiar" value="Borrar formulario">
+            <input type="submit" id="btn-enviar" name="enviar" value="Enviar formulario">
+            <input type="reset" id="btn-limpiar" name="limpiar" value="Restablecer campos">
           </p>
         </fieldset>
       </form>
@@ -139,6 +199,11 @@ Talleres online      Sesiones de cocina en directo         Sábados (11:00 - 13:
       <article id="consejos-recetas">
         <h3>Si nos envías una receta:</h3>
         <p>Indica claramente los gramos o medidas exactas de los ingredientes y el tiempo estimado de cocción para que podamos incorporarla al catálogo oficial con su correspondiente ficha XML.</p>
+      </article>
+
+      <article id="requisitos-taller">
+        <h3>Para los talleres presenciales:</h3>
+        <p>El precio incluye todos los ingredientes frescos, delantal y recetario impreso en papel reciclado. Rogamos puntualidad en el turno seleccionado.</p>
       </article>
     </aside>
   </main>
